@@ -26,3 +26,8 @@
 - The upload form limits media files to 20 MB. For larger MP3s, upload using GitHub's repository interface or Git; then paste the file path into the song entry and save. GitHub Pages and GitHub repository limits still apply.
 - GitHub Pages is **public hosting**. Hiding download buttons does not prevent listeners from saving audio via browser developer tools or direct file URLs. It is NOT a secure private review portal.
 - Copyright disclaimers do not provide legal permission. Do not publish disputed recordings before the necessary rights are cleared. For private industry review, use a secure access-controlled service instead.
+
+## Automatic filename matching
+Open `admin.html`, enter the repository owner, name, branch and a fine-grained GitHub token scoped to this repository with Contents read/write access, then click **Refresh from GitHub**. Select MP3s and matching cover images together in **Automatically pair songs and covers**. For example, `Riscada KUCKIE.mp3` matches `Riscada KUCKIE.jpg` (case and repeated spaces ignored). Click **Match filenames and preview**, then **Upload matched files and save**. Files are uploaded to `songs/` and `covers/` under their original filenames, and `songs.json` is updated. Existing song details with the same title are preserved. Upload limit: 20 MB per file in this editor. Do not put a GitHub token in your repository.
+
+GitHub Pages is public: a hidden download button does not stop file retrieval. A legal notice does not clear third-party rights.
